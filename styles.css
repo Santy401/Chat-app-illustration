@@ -1,0 +1,421 @@
+:root {
+    /* Primary Colors - Text */
+    --pale-violet: hsl(276, 100%, 81%);
+    --moderate-violet: hsl(276, 55%, 52%);
+    --desaturated-dark-violet: hsl(271, 15%, 43%);
+    --grayish-blue: hsl(206, 6%, 79%);
+    --very-dark-violet: hsl(271, 36%, 24%);
+    --dark-grayish-violet: hsl(270, 7%, 64%);
+    
+    /* Gradients */
+    --light-magenta: hsl(293, 100%, 63%);
+    --light-violet: hsl(264, 100%, 61%);
+    
+    /* Secondary Colors */
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-violet: hsl(270, 20%, 96%);
+    --very-light-magenta: hsl(289, 100%, 72%);
+    
+    /* Typography */
+    --font-rubik: 'Rubik', sans-serif;
+}
+
+body {
+    background-color: var(--light-grayish-violet);
+    font-family: var(--font-rubik);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 170vh;
+}
+
+.background {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 75vh;
+    height: 130vh;
+    border-radius: 0 0 400px 80px;
+    background-image: linear-gradient(to right, var(--light-magenta), var(--light-violet));
+    z-index: 1;
+}
+
+.chat-movil {
+    width: 375px;
+    z-index: 10;
+    padding: 20px;
+    height: 750px;
+    background-color: var(--white);
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.header-chat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+    padding: 20px;
+    border-radius: 35px 35px 10px 10px;
+    background-image: linear-gradient(to right, var(--light-violet), var(--light-magenta));
+}
+.header-chat::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 30px;
+    top: -24px;
+    transform: translateX(23%);
+    border-radius: 0 0 20px 20px;
+    background-color: var(--white);
+    position: absolute;
+    margin-top: 20px;
+}
+
+.avatar img {
+    border: 2px solid var(--white);
+    width: 40px;
+    object-fit: cover;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.section-h-1 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    align-items: center;
+}
+
+.info-user {
+    display: flex;
+    flex-direction: column;
+    color: var(--white);
+    margin-left: 10px;
+}
+.name-user {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.online-user {
+    font-size: 12px;
+    color: var(--pale-violet);
+    font-weight: 400;
+}
+.icon-back {
+    margin-right: 10px;
+    cursor: pointer;
+    transform: rotate(120deg);
+    height: 6px;
+    width: 20px;
+    border-radius: 8px;
+    display: block;
+    background-color: var(--white);
+    position: relative;
+}
+
+.icon-back::after {
+    content: '';
+    position: absolute;
+    top: -7px;
+    left: 55%;
+    transform: rotate(-70deg);
+    height: 6px;
+    width: 21px;
+    border-radius: 8px;
+    background-color: var(--white);
+}
+
+.bt-back {
+    cursor: pointer;
+    scale: .6;
+}
+.icon-menu {
+    cursor: pointer;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+}
+
+.icon-menu::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 0;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: var(--white);
+}
+
+.icon-menu::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 0;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: var(--white);
+}
+
+
+.bt-menu {
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    right: -8%;
+    top: -7px;
+    scale: .7;
+    margin-left: 30%; 
+}
+
+.chat {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    z-index: 1;
+    position: relative;
+    top: -10px;
+    background-color: var(--light-grayish-violet);
+    margin-bottom: 10px;
+    border-radius: 35px;
+}
+
+.left {
+    margin-bottom: 15px;
+}
+
+.left .text {
+    background-color: var(--grayish-blue);
+    padding: 10px;
+    color: var(--moderate-violet);
+    margin-top: 10px;
+    border-radius: 20px 20px 20px 5px;
+    margin-right: 30%;
+}
+
+.img-dogs {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: flex-end;
+    margin-right: 30%;
+    margin-top: 10px;
+}
+
+.img-dogs img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.right {
+    display: flex;
+    justify-content: flex-end;
+    text-align: end;
+    margin-bottom: 15px;
+    flex-direction: column;
+}
+
+.right .text {
+    background-color: var(--white);
+    padding: 10px;
+    color: var(--dark-grayish-violet);
+    margin-top: 10px;
+    border-radius: 20px 20px 5px 20px;
+    margin-left: 30%;
+    width: fit-content;
+    text-align: left;
+    display: flex;
+    align-self: flex-end;
+}
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-right: 30%;
+    gap: 10px;
+}
+
+.tasks div {
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+    background-image: linear-gradient(to right, var(--light-magenta), var(--light-violet));
+    cursor: pointer;
+    width: 100%;
+    padding: 15px; 
+    border-radius: 10px 10px 10px 5px;
+    color: rgba(255, 255, 255, 0.746);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.icon-check {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.349);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-message {
+    width: 100%;
+    position: relative;
+}
+
+.content-message input {
+    width: 98%;
+    height: 150%;
+    border-radius: 22px;
+    border: none;
+    padding: 5px;
+}
+
+.content-message input::placeholder {
+    color: var(--grayish-blue);
+    font-size: 1rem;
+    font-weight: 200;
+    font-family: var(--font-rubik);
+    padding: 5px 20px;
+}
+
+.content-message input:focus {
+    outline: none;
+    padding-left: 20px;
+    font-family: var(--font-rubik);
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+.bt-send {
+    cursor: pointer;
+    position: absolute;
+    top: 6px;
+    right: 5px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30%;
+    background-color: var(--very-dark-violet);
+}
+
+.icon-send {
+    display: inline-block;
+    width: 15px;
+    transform: rotate(-180deg);
+    height: 16px;
+    position: relative;
+    cursor: pointer;
+}
+
+.icon-send::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 60%;
+    width: 100%;
+    height: 6px;
+    border-radius: 100px;
+    background-color: var(--white);
+    transform: translateY(-50%) rotate(-45deg);
+    transform-origin: left center;
+}
+
+.icon-send::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 48%;
+    width: 100%;
+    height: 6px;
+    border-radius: 100px;
+    background-color: var(--white);
+    transform: translateY(-50%) rotate(45deg);
+    transform-origin: left center;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.description h1 {
+    color: var(--very-dark-violet);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.description p {
+    color: var(--dark-grayish-violet);
+    font-size: 1.3rem;
+    font-weight: 300;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    line-height: 2rem;
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        overflow: hidden;
+    }
+    .background {
+        height: 130vh;
+        width: 79%;
+        position: absolute;
+        bottom: 10px;
+        z-index: -1;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 1000px;
+        margin: auto;
+        scale: .7;
+        position: relative;
+        top: -70px;
+        height: 110vh;
+    }
+    .chat-movil {
+        margin: auto;
+        scale: .9;
+        margin-left: -10px;
+    }
+    .description {
+        text-align: left;
+    }
+    .description h1 {
+        font-size: 4rem;
+    }
+    .description p {
+        width: 125%;
+        line-height: 2.1rem;
+        font-size: 1.5rem;
+        text-align: left;
+    }
+}
+
